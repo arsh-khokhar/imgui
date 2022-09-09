@@ -1,4 +1,4 @@
-project "ImGui"
+project "imgui"
     kind "StaticLib"
     language "C++"
 
@@ -10,13 +10,14 @@ project "ImGui"
         "imconfig.h",
         "imgui.h",
         "imgui.cpp",
+        "imgui_demo.cpp",
         "imgui_draw.cpp",
         "imgui_internal.h",
+        "imgui_tables.cpp",
         "imgui_widgets.cpp",
         "imstb_rectpack.h",
         "imstb_textedit.h",
-        "imstb_truetype.h",
-        "imstb_demo.cpp"
+        "imstb_truetype.h"
     }
 
     filter "system:windows"
@@ -28,7 +29,7 @@ project "ImGui"
         buildoptions "/MTd"
 
     filter "configurations:Release"
-        buildoptions "/MT"
+        buildoptions "/MTd"
 
     filter "configurations:Dist"
         buildoptions "/MT"
